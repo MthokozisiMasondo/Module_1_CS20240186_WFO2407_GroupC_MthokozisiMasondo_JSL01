@@ -9,7 +9,8 @@ function validateSyntax() {
         input.startsWith('pet_') &&
         !isNaN(input.slice(4, 8)) &&
         input.slice(4, 8).length === 4 &&
-        input.slice(8).length > 0 
+        input.slice(8).length > 0 &&
+        /^[A-Za-z]+$/.test(input.slice(8)) 
     ) {
             result = "Valid Syntax 🟢"
       } else {
